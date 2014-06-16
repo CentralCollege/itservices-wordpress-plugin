@@ -1,1 +1,6 @@
 /* IT Services CSS styles */
+
+.it_floatLeft{
+	float:left;
+	width: 50%;
+}

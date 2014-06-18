@@ -14,6 +14,35 @@ function itservices_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'itservices_styles' );
- 
- 
+
+
+add_action('init', 'it_create_post_type' );
+// Add help desk post type
+function it_create_post_type() {
+	register_post_type( 'help_desk', 
+		array(
+			'labels' => array(
+					'name'=> _( 'Help Desk Posts'),
+					'singular_name' => _( 'Help Desk Post')
+			),
+		'public' => true,
+		'has_archive' => true,
+		'show_in_menu' => true,
+		'show_in_admin_bar' => true,
+		'menu_position' => 5,
+		'menu_icon' => 'dashicons-editor-help',
+		'taxonomies' => array('categories', 'tags')
+		)
+	);
+}
+
+// Add unfiltered html for editor
+function add_unfiltered_caps() {
+	$role = get_role( 'editor' );
+	$role -> add_cap('unfiltered_html');
+}
+
+add_action( 'init', 'add_unfiltered_caps');
+
+
 ?>

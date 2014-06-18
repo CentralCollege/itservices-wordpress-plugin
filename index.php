@@ -12,7 +12,6 @@
 function itservices_styles() {
 	wp_enqueue_style( 'itservices_styles', plugins_url('/css/styles.css', __FILE__));
 }
-
 add_action( 'wp_enqueue_scripts', 'itservices_styles' );
 
 
@@ -31,7 +30,8 @@ function it_create_post_type() {
 		'show_in_admin_bar' => true,
 		'menu_position' => 5,
 		'menu_icon' => 'dashicons-editor-help',
-		'taxonomies' => array('categories', 'tags')
+		'taxonomies' => array('categories', 'tags'),
+		'rewrite' => array('slug' => 'help-desk')
 		)
 	);
 }
@@ -41,7 +41,6 @@ function add_unfiltered_caps() {
 	$role = get_role( 'editor' );
 	$role -> add_cap('unfiltered_html');
 }
-
 add_action( 'init', 'add_unfiltered_caps');
 
 

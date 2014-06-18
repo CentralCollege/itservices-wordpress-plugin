@@ -36,6 +36,14 @@ function it_create_post_type() {
 	);
 }
 
+//Flush rewrite rules on plugin initialization
+function it_rewrite_flush(){
+	it_create_post_type();
+	flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'it_rewrite_flush' );
+	
+
 // Add unfiltered html for editor
 function add_unfiltered_caps() {
 	$role = get_role( 'editor' );

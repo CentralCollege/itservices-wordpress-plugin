@@ -20,6 +20,34 @@
 	width: 69%;
 }
 
+.it_block{
+	float: left;
+	width: 25%;
+	text-align: center;
+	border: 1px solid #ccc;
+	margin: .25em;
+	padding: .25em;
+}
+.it_block h3{
+	text-align: center;
+}
+.it_block p, .it_block ul{
+	text-align: left;
+}
+.post-content .dashicons{
+	border-radius: 50%;
+	border: 5px solid #cb2026;
+}
+.post-content .dashicons, .post-content .dashicons-before:before{
+	width: 75px;
+	height: 75px;
+	font-size: 4.5em;
+	color: #fff;
+	background-color: #990000;
+	padding: .2em;
+}
+
+
 /*---------------------------------------------------*/
 /* Responsive */
 /*---------------------------------------------------*/

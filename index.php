@@ -10,6 +10,7 @@
  
 // Add special styles for this plugin
 function itservices_styles() {
+	wp_enqueue_style( 'dashicons');
 	wp_enqueue_style( 'itservices_styles', plugins_url('/css/styles.css', __FILE__));
 }
 add_action( 'wp_enqueue_scripts', 'itservices_styles' );

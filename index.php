@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Plugin Name: Central College IT Services Plugin
@@ -53,4 +54,36 @@ function add_unfiltered_caps() {
 add_action( 'init', 'add_unfiltered_caps');
 
 
+// Add custom tinyMCE stylesheet
+	function add_it_editor_styles() {
+		add_editor_style('it-custom-editor-style.css');
+	}
+	add_action('init', 'add_it_editor_styles');
+	
+	// Add formats dropdown to tinyMCE
+	function cui_it_mce_buttons( $buttons ) {
+		array_unshift( $buttons, 'styleselect' );
+		return $buttons;
+	}
+	// Register our callback to the appropriate filter
+	add_filter('mce_buttons', 'cui_mce_buttons');
+	
+
+	// Callback function to filter the MCE settings
+	function add_it_tinyMCE_formats( $init_array ) {  
+ 		$style_formats = array(  
+ 			array(  
+ 				'title' => 'dashicon',  
+				'selector' => 'p,div',  
+				'block' => 'p',
+				'selector' => 'p',
+ 				'classes' => 'dashicon',
+ 				'wrapper' => true,
+				)
+				);  
+		$init_array['style_formats'] = json_encode( $style_formats );
+		return $init_array;  
+	} 
+	// Attach callback to 'tiny_mce_before_init' 
+	add_filter( 'tiny_mce_before_init', 'add_it_tinyMCE_formats' );
 ?>

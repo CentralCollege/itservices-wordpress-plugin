@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Plugin Name: Central College IT Services Plugin
@@ -53,4 +54,14 @@ function add_unfiltered_caps() {
 add_action( 'init', 'add_unfiltered_caps');
 
 
+// Add custom tinyMCE stylesheet
+	function add_it_editor_styles($mce_css) {
+		if ( ! empty( $mce_css ) )
+			$mce_css .= ',';
+		
+		$mce_css .= plugins_url('css/styles.css', __FILE__);
+		return $mce_css;
+	}
+	add_action('mce_css', 'add_it_editor_styles');
+	
 ?>

@@ -1,28 +1,8 @@
 /* IT Services CSS styles */
 
-.it_floatLeft {
-	float:left;
-	width: 50%;
-	height: 13em;
-	border-bottom: 1px solid #000000;
-	padding-top: 1%;
-}
-.it_icons {
-	float: left;
-	width: 30%;
-	height: 90%;
-}
-.it_icons img {
-	margin-left: 10%;
-}
-.it_content {
-	float: right;
-	width: 69%;
-}
-
 .it_block{
 	float: left;
-	width: 25%;
+	width: 45%;
 	text-align: center;
 	border: 1px solid #ccc;
 	margin: .25em;

@@ -63,5 +63,5 @@ add_action( 'init', 'add_unfiltered_caps');
 		return $mce_css;
 	}
 	add_action('mce_css', 'add_it_editor_styles');
-
+	
 ?>

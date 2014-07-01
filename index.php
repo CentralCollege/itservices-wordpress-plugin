@@ -60,4 +60,75 @@ function add_it_editor_styles($mce_css) {
 	$mce_css .= plugins_url('css/styles.css', __FILE__);
 	return $mce_css;
 }
+// Create a widget
+class it_services_spiceWorks extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'it_services', // Base ID
+			__('IT Services - Spice Works', 'text_domain'), // Name
+			array( 'description' => __( 'Adds a graphic widget for linking to SpiceWorks', 'text_domain' ), ) // Args
+		);
+	}
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+		?>
+        <div class="widget textwidget">
+            <h2>Help Desk</h2>
+            <p>Need help? Use our online system to submit a help desk ticket.</p>
+            <p><a href="https://itshelp.central.edu/portal" class="helpDeskButton">submit a ticket now!</a></p>
+		</div>
+        <?php
+		/*$title = apply_filters( 'widget_title', $instance['title'] );
+
+		echo $args['before_widget'];
+		if ( ! empty( $title ) )
+			echo $args['before_title'] . $title . $args['after_title'];
+		echo __( 'Hello, World!', 'text_domain' );
+		echo $args['after_widget'];*/
+	}
+
+	/**
+	 * Back-end widget form.
+	 *
+	 * @see WP_Widget::form()
+	 *
+	 * @param array $instance Previously saved values from database.
+	 */
+	public function form( $instance ) {
+		//Do Nothing
+		?>
+        <p>There are no options for this widget.</p>
+        <?php
+	}
+
+	/**
+	 * Sanitize widget form values as they are saved.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance Values just sent to be saved.
+	 * @param array $old_instance Previously saved values from database.
+	 *
+	 * @return array Updated safe values to be saved.
+	 */
+	public function update( $new_instance, $old_instance ) {
+		//Do nothing
+	}
+}
+function register_spiceWorks_widget() {
+    register_widget( 'it_services_spiceWorks' );
+}
+add_action( 'widgets_init', 'register_spiceWorks_widget' );
 ?>

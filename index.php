@@ -73,7 +73,6 @@ class it_services_spiceWorks extends WP_Widget {
 			array( 'description' => __( 'Adds a graphic widget for linking to SpiceWorks', 'text_domain' ), ) // Args
 		);
 	}
-
 	/**
 	 * Front-end display of widget.
 	 *

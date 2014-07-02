@@ -10,11 +10,14 @@
 }
 .it_block_fullwidth {
 	float: left;
-	width: 97%;
+	width: 93%;
 	text-align: center;
 	border: 1px solid #ccc;
 	margin: .25em;
 	padding: .25em;
+}
+.it_block_fullwidth ul{
+	text-align: left;
 }
 .icon_url a {
 	text-decoration: none;

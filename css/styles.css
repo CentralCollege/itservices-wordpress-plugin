@@ -8,6 +8,14 @@
 	margin: .25em;
 	padding: .25em;
 }
+.it_block_fullwidth {
+	float: left;
+	width: 97%;
+	text-align: center;
+	border: 1px solid #ccc;
+	margin: .25em;
+	padding: .25em;
+}
 .icon_url a {
 	text-decoration: none;
 	border-bottom: none;

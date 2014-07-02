@@ -71,6 +71,11 @@
 .it_icons img {
 	margin-left: 10%;
 }
+@media only screen and (max-width: 970px) {
+.it_block {
+	width: 93%;
+}
+}
 @media only screen and (max-width: 480px) {
 .it_floatLeft {
 	float: none;

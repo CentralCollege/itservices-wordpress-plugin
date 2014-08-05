@@ -87,7 +87,7 @@ class it_services_spiceWorks extends WP_Widget {
             <h2>Help Desk</h2>
             <p>Need help with technology? Use our online system to submit a help desk ticket.</p>
             <p>&nbsp;</p>
-            <p><a href="https://itshelp.central.edu/portal" class="helpDeskButton">submit a ticket now!</a></p>
+            <p><a href="https://itshelp.central.edu/portal" class="helpDeskButton" target="_blank">submit a ticket now!</a></p>
             <p align="center">or call us at 641-628-7010</p>
 		</div>
         <?php

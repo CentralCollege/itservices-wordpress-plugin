@@ -89,6 +89,8 @@ class it_services_spiceWorks extends WP_Widget {
             <p>&nbsp;</p>
             <p><a href="https://itshelp.central.edu/portal" class="helpDeskButton" target="_blank">submit a ticket now!</a></p>
             <p align="center">or call us at 641-628-7010</p>
+            <p>&nbsp;</p>
+            <p>After-hours outage? Contact the Info Booth at 641-628-9000.</p>
 		</div>
         <?php
 		/*$title = apply_filters( 'widget_title', $instance['title'] );

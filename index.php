@@ -69,7 +69,7 @@ class it_services_spiceWorks extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'it_services', // Base ID
-			__('IT Services - Spice Works', 'text_domain'), // Name
+			__('IT Services - Help Desk', 'text_domain'), // Name
 			array( 'description' => __( 'Adds a graphic widget for linking to SpiceWorks', 'text_domain' ), ) // Args
 		);
 	}
@@ -89,6 +89,8 @@ class it_services_spiceWorks extends WP_Widget {
             <p>&nbsp;</p>
             <p><a href="https://itshelp.central.edu/portal" class="helpDeskButton" target="_blank">submit a ticket now!</a></p>
             <p align="center">or call us at 641-628-7010</p>
+            <p>&nbsp;</p>
+            <p>After-hours outage? Contact the Info Booth at 641-628-9000.</p>
 		</div>
         <?php
 		/*$title = apply_filters( 'widget_title', $instance['title'] );

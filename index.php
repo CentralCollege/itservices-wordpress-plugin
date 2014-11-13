@@ -69,7 +69,7 @@ class it_services_spiceWorks extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'it_services', // Base ID
-			__('IT Services - Spice Works', 'text_domain'), // Name
+			__('IT Services - Help Desk', 'text_domain'), // Name
 			array( 'description' => __( 'Adds a graphic widget for linking to SpiceWorks', 'text_domain' ), ) // Args
 		);
 	}

@@ -40,23 +40,23 @@
 	background-color: #990000;
 	padding: .2em;
 }
-.helpDeskButton{
-	padding:.25em; 
-	margin: .25em;
-	background-color: #cb2026;
+
+a.helpDeskButton:link, a.helpDeskButton:visited{
+	width: 75%;
 	border: 1px solid #990000;
-	display:block;
-	border-radius: .25em;
+	background-color: #cb2026;
 	color: #fff;
-	text-decoration: none;
-	text-align: center;
-	text-transform:uppercase;
-	font-weight:bold;
+	padding: .5em;
+	margin: 1em auto;
+	border-radius: .5em;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-align:center;
+	display: block;
 }
-.helpDeskButton:hover{
+a.helpDeskButton:hover{
 	background-color: #990000;
 }
-
 
 /*---------------------------------------------------*/
 /* Responsive */
